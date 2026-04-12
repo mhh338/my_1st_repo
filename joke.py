@@ -16,5 +16,5 @@ while True:
     
     if (restart.lower() == "n"):
         print("Program Ends!")
-        pyttsx3.speak("See you next time, INSHALLAH")
+        pyttsx3.speak("See you next time")
         break

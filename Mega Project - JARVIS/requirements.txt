@@ -1,0 +1,5 @@
+# First setting up virtual environment
+
+speech_recognition as sr
+webbrowser
+pyttsx3

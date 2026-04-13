@@ -1,5 +1,5 @@
 # First setting up virtual environment
 
-speech_recognition as sr
-webbrowser
+speechrecognition
+pyaudio
 pyttsx3

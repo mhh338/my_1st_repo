@@ -1,6 +1,11 @@
 # First setting up virtual environment
 
-speechrecognition
-pyaudio
-pyttsx3
-requests
+import speechrecognition
+import pyaudio
+import pyttsx3
+import requests
+import webLinks
+import requests
+from google import genai
+import os
+from dotenv import load_dotenv

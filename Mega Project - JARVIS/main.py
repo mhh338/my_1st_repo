@@ -6,6 +6,7 @@ import requests
 from google import genai
 import os
 from dotenv import load_dotenv
+import re 
 
 # recognizer = sr.Recognizer()
 # newsapi = "1527e5c5e8dc426c88d064613f41aaef"
@@ -15,6 +16,14 @@ def speak(text):
     engine = pyttsx3.init()
     engine.say(text)
     engine.runAndWait()
+
+def clean_text(text):
+    text = re.sub(r'\*\*(.*?)\*\*', r'\1', text)   # remove bold
+    text = re.sub(r'\*(.*?)\*', r'\1', text)       # remove italic
+    text = re.sub(r'`(.*?)`', r'\1', text)         # remove inline code
+    text = re.sub(r'^\s*[\-\*]\s+', '', text, flags=re.MULTILINE)
+    text = re.sub(r'^#+\s*', '', text, flags=re.MULTILINE)  # remove bullet marks
+    return text.strip()
 
 def aiHandler(_cmd):
         load_dotenv()
@@ -28,8 +37,12 @@ def aiHandler(_cmd):
 
         user_question = _cmd
         response = chat.send_message(user_question)
-        print("Gemini:", response.text)
-        return response
+        # Use it if you want to see response in plain text format.
+        plain_text = clean_text(response.text) 
+        return plain_text
+        # Use it if you want to see response in raw format.
+        # print("Gemini:", response.text) 
+        # return response
 
 
 def processCmd(_cmd):

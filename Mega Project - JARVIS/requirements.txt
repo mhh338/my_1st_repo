@@ -7,7 +7,7 @@ import pyttsx3
 import requests
 import webLinks
 import requests
-from google import genai
+from google import genai (google-genai)
 import os
 from dotenv import load_dotenv
 

@@ -2,7 +2,7 @@
 
 # Dependencies
 import speechrecognition
-import pyaudio
+import pyaudio (For this package install python 3.12.10 and then run "py -3.12 -m pip install pyaudio".)
 import pyttsx3
 import webLinks
 import requests

@@ -1,0 +1,4 @@
+# First setting up virtual environment
+
+# Dependencies
+pymupdf

@@ -27,6 +27,9 @@ git commit -m "first commit"
 git branch -M main
 (Creates a branch named 'main'.)
 
+git checkout -b branch-name
+(Creates a branch and moves into it.)
+
 git remote add origin https://github.com/mhh338/my_1st_repo.git
 (Connects the local repo on the computer to github repo.)
 

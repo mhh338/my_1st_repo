@@ -1,0 +1,10 @@
+--For resolving this warning,
+"WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning."
+-- We have to create virtual environment.
+--For creating virtual environment,
+     python3 -m venv .venv
+--'.venv' is a convention of naming file '.' is for hidding the file(cannot be shown by only 'ls' command, but will be shown by 'ls -a' command), the file name could by myenv, virenv or for hidden .myenv.
+--for activating the virtual environment,
+     source .venv/bin/activate
+--for deactivating,
+     deavtivate

@@ -37,6 +37,17 @@ git push -u origin main
 (Puhes the staged file to the repo of origin given in previous step. 
 Here '-u' is used so that after wards user can only write 'git push' and it pushes to the 'main' branch.)
 
+# Pushing Files From Another Device
+git config --global user.email "EMAIL"
+git config --global user.name "NAME"
+
+--Generate access token
+git remote set-url origin https://<ACCESS_TOKEM>@github.com/NAME/REPO_NAME.git
+
+--Now push it
+git push -u origin main
+
+# Cloning A Repository 
 git clone <repo-URL>
 (Clone a repository)
 

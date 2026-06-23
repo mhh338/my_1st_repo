@@ -54,3 +54,25 @@ git clone <repo-URL>
 git cone -b <branch-name> <repo-URL>
 (Clone a particular branch from a repository)
 
+# Pushing Files Having Size Greater Than 100 MB
+    
+    1, Initialize Git LFS
+        git lfs install
+
+    2, Track the file having size > 100 MB
+        git lfs track "file.extension"
+        This creates '.gitattributes' file, if there are multiple files having same extension, we can write,
+        git lfs track "*.extension".
+
+    3, Staging the file
+        git add .gitattributes or git add .(For staging all files)
+
+    4, Adding & commit
+        git add parameters.npz
+        git commit -m "Add model parameters using Git LFS"
+
+    5, Pushing
+        git push origin main
+
+# Cloning Files Having Size > 100 MB
+    Follow above cloning method but install lfs prior to it.
